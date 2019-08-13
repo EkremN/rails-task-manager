@@ -2,7 +2,9 @@
   <h1>My Tasks</h1>
   <ol>
   <% @tasks.each do |task| %>
-   <li><%= task.title %></li>
+    <%= link_to task_path(task) do %>
+      <li> <%= task.title %> </li>
+    <% end %>
     <% if task.completed == false %>
       <input type="checkbox" name="" >
     <% else %>

@@ -4,4 +4,18 @@ Rails.application.routes.draw do
   #Read
   get 'tasks', to: 'tasks#index'
 
+  #Create
+  get 'tasks/new', to: 'tasks#new'
+  post 'tasks', to: 'tasks#create'
+
+  #Read One
+  get 'tasks/:id', to: 'tasks#show', as: :task
+
+  #Update
+  patch 'tasks/:id', to: 'tasks#update'
+  get 'tasks/:id/edit', to: 'tasks#edit'
+
+  #Delite
+
+
 end
