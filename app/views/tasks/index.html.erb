@@ -1,7 +1,13 @@
-<h1>My Tasks</h1>
-
-<% @tasks.each do |task| %>
-  <input type="checkbox" name="">
-  <h2><%= task.title %></h2>
-  <p><%= task.details %></p>
-<% end %>
+<section id="content">
+  <h1>My Tasks</h1>
+  <ol>
+  <% @tasks.each do |task| %>
+   <li><%= task.title %></li>
+    <% if task.completed == false %>
+      <input type="checkbox" name="" >
+    <% else %>
+      <input type="checkbox" name="" checked>
+    <% end %>
+  <% end %>
+  <ol>
+</section>
