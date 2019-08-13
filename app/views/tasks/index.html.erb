@@ -2,6 +2,9 @@
   <h1>My Tasks</h1>
   <ol>
   <% @tasks.each do |task| %>
+    <br><br>
+    <%= link_to "Delete", task_path(task),
+        method: :delete %>
     <%= link_to task_path(task) do %>
       <li> <%= task.title %> </li>
     <% end %>
@@ -10,6 +13,7 @@
     <% else %>
       <input type="checkbox" name="" checked>
     <% end %>
+      <%= link_to '+ Add new', new_path(@tasks)%>
   <% end %>
   <ol>
 </section>
